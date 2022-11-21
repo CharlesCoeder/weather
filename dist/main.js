@@ -1,0 +1,1 @@
+document.querySelector("button").addEventListener("click",(()=>{!async function(e){const t=await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${e},uk&APPID=1a9418b179e6ee395576bf21049a7c77`,{mode:"cors"});console.log(await t.json())}(document.getElementById("location").value)}));
