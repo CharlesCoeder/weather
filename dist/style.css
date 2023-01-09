@@ -1,0 +1,9 @@
+@import "../node_modules/@geoapify/geocoder-autocomplete/styles/round-borders.css";
+
+.autocomplete-container {
+    position: relative;
+}
+
+.geoapify-autocomplete-items {
+    font-family: sans-serif;
+}
