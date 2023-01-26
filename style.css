@@ -7,3 +7,131 @@
 .geoapify-autocomplete-items {
     font-family: sans-serif;
 }
+
+body {
+  background-color: #2A4849;
+  font-family: sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.weather {
+  background-color: #B5CA8D;
+  padding: 30px;
+  border-radius: 50px;
+  position: relative;
+  width: max(40vw, 400px);
+  height: max(40vw, 400px);
+  display: grid;
+}
+
+.geoapify-autocomplete-input {
+  border-radius: 30px;
+  text-align: center;
+}
+
+.header {
+  color: white;
+  font-size: 4rem;
+  font-family: 'Bakbak One', sans-serif;
+}
+
+.dummy {
+  background-color: #222E50;
+}
+
+.weatherData {
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+}
+
+.location {
+  background-color: #222E50;
+  color: white;
+  border-radius: 20px;
+  padding: 5px 20px 5px;
+}
+
+.names {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.city {
+  font-size: 4rem;
+  align-self: center;
+}
+
+.state {
+  font-size: 1.5rem;
+  align-self: center;
+}
+
+.loader {
+  /* Loader code from https://www.w3schools.com/howto/howto_css_loader.asp */
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  justify-self: center;
+  align-self: center;
+  position: absolute;
+
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.temperature {
+  font-size: 5rem;
+  grid-column: 1 / 3;
+  justify-self: center;
+  align-self: center;
+}
+
+
+.humidity, .sunrise {
+  grid-column: 1 / 2;
+}
+
+.feelsLike, .sunet {
+  grid-column: 2 / 3;
+}
+
+.data-container > img {
+  width: 25%;
+  justify-self: end;
+}
+
+.data-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  font-size: 1.5rem;
+}
+
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hidden {
+  display: none;
+}

@@ -7,17 +7,56 @@
     <title>Weather</title>
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="autocomplete" class="autocomplete-container"></div>
-    <div class="data">
-        <div class="weatherData">
-            <div>Temperature: <span class="temperature"></span></div>
-            <div>Humidity: <span class="humidity"></span></div>
-            <div>Feels Like: <span class="feelsLike"></span></div>
-            <div>Sunrise: <span class="sunrise"></span></div>
-            <div>Sunset: <span class="sunset"></span></div>
+  <div class="container">
+    <div class="header">What's the weather in...</div>
+    <div class="weather">
+      <div class="loader"></div>
+      <div class="info hidden">
+        <div class="top">
+          <div id="autocomplete" class="autocomplete-container hidden"></div>
+          <div class="location">
+            <div class="names">
+              <div class="city"></div>
+              <div class="state"></div>
+            </div>
+          </div>
         </div>
+        <div class="weatherData">
+          <div class="temperature"></div>
+          <div class="data-container">
+            <img src="../src/assets/feels_like.svg" alt="feels_like">
+            <div class="data">
+              <div>Feels Like</div>
+              <div class="feelsLikeData"></div>
+            </div>
+          </div>
+          <div class="data-container">
+            <img src="../src/assets/humidity.svg" alt="humidity">
+            <div class="data">
+              <div>Humidity</div>
+              <div class="humidityData"></div>
+            </div>
+          </div>
+          <div class="data-container">
+            <img src="../src/assets/sunrise.svg" alt="sunrise">
+            <div class="data">
+              <div>Sunrise</div>
+              <div class="sunriseData"></div>
+            </div>
+          </div>
+          <div class="data-container">
+            <img src="../src/assets/sunset.svg" alt="sunset">
+            <div class="data">
+              <div>Sunset</div>
+              <div class="sunsetData"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </body>
 </html>
