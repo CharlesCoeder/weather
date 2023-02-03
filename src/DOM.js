@@ -9,15 +9,9 @@ const stateDiv = document.querySelector('.state');
 let currentUnit = 'F';
 let localData;
 
-const toCelsius = (fahrenheit) => {
-  const celsius = ((fahrenheit - 32) * 5) / 9;
-  return Math.round(celsius);
-};
+const toCelsius = (fahrenheit) => ((fahrenheit - 32) * 5) / 9;
 
-const toFahrenheit = (celsius) => {
-  const fahrenheit = ((celsius * 9) / 5 + 32);
-  return Math.round(fahrenheit);
-};
+const toFahrenheit = (celsius) => ((celsius * 9) / 5 + 32);
 
 const changeMeasurements = () => {
   if (currentUnit === 'F') {
@@ -40,11 +34,11 @@ const updateLocalData = (weatherData) => {
 };
 
 const displayWeather = () => {
-  temperatureDiv.textContent = `${localData.temp}°${currentUnit}`;
+  temperatureDiv.textContent = `${Math.round(localData.temp)}°${currentUnit}`;
   sunriseDiv.textContent = localData.sunrise;
   sunsetDiv.textContent = localData.sunset;
-  humidityDiv.textContent = `${localData.humidity}%`;
-  feelsLikeDiv.textContent = `${localData.feelsLike}°${currentUnit}`;
+  humidityDiv.textContent = `${Math.round(localData.humidity)}%`;
+  feelsLikeDiv.textContent = `${Math.round(localData.feelsLike)}°${currentUnit}`;
   cityDiv.textContent = localData.city;
   stateDiv.textContent = localData.state;
 };

@@ -48,11 +48,7 @@ const findWeather = async (location) => {
   const { lat, lon } = coords;
   const response = await requestData(lat, lon);
 
-  // extract temp, humidity, feelsLike and round to nearest integer
-  let { temp, humidity, feels_like: feelsLike } = response.main;
-  temp = Math.round(temp);
-  humidity = Math.round(humidity);
-  feelsLike = Math.round(feelsLike);
+  const { temp, humidity, feels_like: feelsLike } = response.main;
 
   // extract sunrise and sunset times
   const { sunrise, sunset } = getSunTimes(response);
