@@ -1,6 +1,6 @@
 import autoCompleteBox from './autocomplete';
 import findWeather from './weather_api';
-import showWeather from './DOM';
+import updateWeather from './DOM';
 
 const loader = document.querySelector('.loader');
 const info = document.querySelector('.info');
@@ -23,7 +23,7 @@ fetch('https://api.geoapify.com/v2/place-details?id=512ba5677a898f5dc059e1cbe957
   .then(async (response) => {
     const location = response.features[0];
     const initialData = await findWeather(location);
-    showWeather(initialData);
+    updateWeather(initialData);
     showAfterLoading();
   });
 
@@ -33,5 +33,5 @@ autocomplete.on('select', async (location) => {
   const weatherData = await findWeather(location);
   autocomplete.setValue('');
   showAfterLoading();
-  showWeather(weatherData);
+  updateWeather(weatherData);
 });
