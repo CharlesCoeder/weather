@@ -1,3 +1,5 @@
+import '@geoapify/geocoder-autocomplete/styles/round-borders.css';
+
 const temperatureDiv = document.querySelector('.temperature');
 const humidityDiv = document.querySelector('.humidityData');
 const sunriseDiv = document.querySelector('.sunriseData');
