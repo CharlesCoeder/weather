@@ -29,9 +29,11 @@ fetch('https://api.geoapify.com/v2/place-details?id=512ba5677a898f5dc059e1cbe957
 
 const { autocomplete } = autoCompleteBox;
 autocomplete.on('select', async (location) => {
-  hideWhileLoading();
-  const weatherData = await findWeather(location);
-  autocomplete.setValue('');
-  showAfterLoading();
-  updateWeather(weatherData);
+  if (location != null) {
+    hideWhileLoading();
+    const weatherData = await findWeather(location);
+    autocomplete.setValue('');
+    showAfterLoading();
+    updateWeather(weatherData);
+  }
 });
